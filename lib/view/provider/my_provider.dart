@@ -9,20 +9,16 @@ class MyCartProvider with ChangeNotifier {
     qcount++;
     notifyListeners();
   }
-
   void decre(){
     qcount--;
     notifyListeners();
   }
-
   void additem(ItemModal items){
     itemlist.add(items);
     notifyListeners();
   }
-
   void deleteitem(int index){
     itemlist.removeAt(index);
     notifyListeners();
   }
-
 }

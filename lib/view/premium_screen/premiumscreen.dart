@@ -3,18 +3,18 @@ import 'package:ecommercesas/view/cart_screen/cart_screen.dart';
 import 'package:ecommercesas/view/details_screen/details_screen.dart';
 import 'package:flutter/material.dart';
 
-class HomeScreen extends StatelessWidget {
-  const HomeScreen({super.key});
+class PremiumScreen extends StatelessWidget {
+  const PremiumScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
+        leading: SizedBox(),
         backgroundColor: Colors.white,
         elevation: 0,
         leadingWidth: 0,
-        leading: SizedBox(),
         title: Text(
           "Discover",
           style: TextStyle(color: Colors.black, fontSize: 25),
@@ -92,13 +92,14 @@ class HomeScreen extends StatelessWidget {
               height: 15,
             ),
             GridView.builder(
-              itemCount: publicApiResponseConstants.length,
+              itemCount: premiumItems.length,
               physics: NeverScrollableScrollPhysics(),
               shrinkWrap: true,
               scrollDirection: Axis.vertical,
               gridDelegate:
                   SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 2),
-              itemBuilder: (context, index) => Padding(
+              itemBuilder: (context, index) => 
+              Padding(
                 padding: const EdgeInsets.fromLTRB(10, 10, 10, 10),
                 child: Stack(
                   children: [
@@ -107,12 +108,12 @@ class HomeScreen extends StatelessWidget {
                           context,
                           MaterialPageRoute(
                             builder: (context) => DetailsScreen(
-                              stock: publicApiResponseConstants[index].p_availability!,
-                              details: publicApiResponseConstants[index].p_details.toString(),
-                              pid: publicApiResponseConstants[index].p_id!,
-                                pic: publicApiResponseConstants[index].photo.toString(),
-                                price: publicApiResponseConstants[index].p_cost!,
-                                product: publicApiResponseConstants[index].p_name.toString()),
+                              stock: premiumItems[index].p_availability!,
+                              details:premiumItems[index].p_details.toString() ,
+                              pid: premiumItems[index].p_id!,
+                                pic: premiumItems[index].photo.toString(),
+                                price: premiumItems[index].p_cost!,
+                                product: premiumItems[index].p_name.toString()),
                           )),
                       child: Container(
                         height: 200,
@@ -127,18 +128,18 @@ class HomeScreen extends StatelessWidget {
                                   borderRadius: BorderRadius.circular(15),
                                   image: DecorationImage(
                                       fit: BoxFit.fitWidth,
-                                      image: NetworkImage(publicApiResponseConstants[index].photo.toString()))),
+                                      image: NetworkImage(premiumItems[index].photo.toString()))),
                             ),
                             Text(
-                              publicApiResponseConstants[index].p_name.toString(),
+                              premiumItems[index].p_name.toString(),
                               style: TextStyle(
                                 fontWeight: FontWeight.bold,
                               ),
                             ),
                             Text(
-                              '₹ ${publicApiResponseConstants[index].p_cost.toString()}',
+                              'Mrp: ${premiumItems[index].p_cost.toString()}',
                               style:
-                                  TextStyle(fontSize: 11, color: Colors.green,fontWeight: FontWeight.bold),
+                                  TextStyle(fontSize: 11, color: Colors.green),
                             )
                           ],
                         ),
