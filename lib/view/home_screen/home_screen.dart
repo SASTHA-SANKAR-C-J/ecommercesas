@@ -118,7 +118,7 @@ class HomeScreen extends StatelessWidget {
               height: 5,
             ),
             GridView.builder(
-              itemCount: 6,
+              itemCount: names.length,
               physics: NeverScrollableScrollPhysics(),
               shrinkWrap: true,
               scrollDirection: Axis.vertical,

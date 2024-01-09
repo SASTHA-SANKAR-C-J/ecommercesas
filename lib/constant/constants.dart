@@ -14,6 +14,9 @@ List<String> pics = [
   "https://images.pexels.com/photos/2002717/pexels-photo-2002717.jpeg?auto=compress&cs=tinysrgb&w=600",
   "https://images.pexels.com/photos/9218538/pexels-photo-9218538.jpeg?auto=compress&cs=tinysrgb&w=600",
   "https://images.pexels.com/photos/7764611/pexels-photo-7764611.jpeg?auto=compress&cs=tinysrgb&w=600",
+  "https://images.pexels.com/photos/9558583/pexels-photo-9558583.jpeg?auto=compress&cs=tinysrgb&w=600",
+  "https://images.pexels.com/photos/2002717/pexels-photo-2002717.jpeg?auto=compress&cs=tinysrgb&w=600",
+  "https://images.pexels.com/photos/9218538/pexels-photo-9218538.jpeg?auto=compress&cs=tinysrgb&w=600",
 ];
 
 List<String> names = [
@@ -22,7 +25,10 @@ List<String> names = [
   "Black T-Shirt",
   "Golden Coat",
   "Jackets",
-  "Pants"
+  "Pants",
+  "Black T-Shirt",
+  "Golden Coat",
+  "Jackets",
 ];
 
-List<int> mrp = [500, 1000, 500, 2000, 1000, 500];
+List<int> mrp = [500, 1000, 500, 2000, 1000, 500,500, 2000, 1000];
