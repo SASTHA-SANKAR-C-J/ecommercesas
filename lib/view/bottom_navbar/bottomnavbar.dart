@@ -1,11 +1,8 @@
-import 'dart:convert';
 import 'package:ecommercesas/view/home_screen/home_screen.dart';
 import 'package:ecommercesas/view/premium_screen/premiumscreen.dart';
 import 'package:ecommercesas/view/tamilnadu_screen/tamilnaduscreen.dart';
-import 'package:http/http.dart' as http;
 import 'package:flutter/material.dart';
 import 'package:google_nav_bar/google_nav_bar.dart';
-import 'package:provider/provider.dart';
 
 class BottomNavBar extends StatefulWidget {
   const BottomNavBar({super.key});

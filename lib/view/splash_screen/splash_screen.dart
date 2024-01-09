@@ -1,6 +1,5 @@
 import 'package:ecommercesas/view/bottom_navbar/bottomnavbar.dart';
 import 'package:flutter/material.dart';
-import 'package:provider/provider.dart';
 import 'package:lottie/lottie.dart';
 
 class SplashScreen extends StatefulWidget {
